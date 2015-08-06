@@ -1,12 +1,18 @@
 #!/bin/sh
 
-echo "Rename .tmux.conf to .old.tmux.conf"
+set -eu
 
-if [ -f ~/script.txt  ]
-then
-  echo "File exists, rename it and create link to our new tmux conf"
-  mv ~/script.txt ~/old.script.txt
-  #ln -s ~/new
-else
-  echo "Don't exists, so just create a link to new .tmux.conf"
-fi
+TMUX_CONF=~/.tmux.conf
+BASHRC=~/.bashrc
+
+BackupOldDotFile () {
+  if [ -f $1  ]
+  then
+    echo "Renaming $1 to .old$1"
+    mv $1 ~/old.$1
+  else
+    echo "Don't exists, $1"
+  fi
+}
+
+BackupOldDotFile $TMUX_CONF
