@@ -1,19 +1,19 @@
 #!/bin/sh
 
-set -eu
+set -u
 
 TMUX_CONF=~/.tmux.conf
 BASHRC=~/.bashrc
-TESTE=~/teste_um.txt
-TESTE_DOIS=~/teste_dois.txt
 
-DOT_FILES_TO_BACKUP="$TESTE $TESTE_DOIS"
+DOT_FILES_TO_BACKUP="$TMUX_CONF $BASHRC"
+
+DATE=`date +%Y%m%d%H%M%S`
 
 BackupOldDotFile () {
   if [ -f $1  ]
   then
-    echo "Renaming $1 to $1.old"
-    mv $1 $1.old
+    echo "Renaming $1 to $1.$DATE"
+    mv $1 $1.$DATE
   else
     echo "Don't exists, $1"
   fi
@@ -24,3 +24,16 @@ do
   BackupOldDotFile "$i"
 done
 
+CURRENT_PATH=`pwd`
+
+CreateLinkTo() {
+  cd ~/
+  ln -s $CURRENT_PATH/dotfiles/$1 $1
+  cd -
+}
+
+CreateLinkTo .tmux.conf
+CreateLinkTo .bashrc
+
+source $TMUX_CONF
+source $BASHRC
