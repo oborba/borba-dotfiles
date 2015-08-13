@@ -27,9 +27,7 @@ done
 CURRENT_PATH=`pwd`
 
 CreateLinkTo() {
-  cd ~/
-  ln -s $CURRENT_PATH/dotfiles/$1 $1
-  cd -
+  $(cd $HOME && ln -s $CURRENT_PATH/dotfiles/$1 $1)
 }
 
 CreateLinkTo .tmux.conf
