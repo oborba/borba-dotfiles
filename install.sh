@@ -7,7 +7,7 @@ DOT_FILES_TO_BACKUP=$(ls -a dotfiles/ | grep .[a-z]\w*)
 DATE=`date +%Y%m%d%H%M%S`
 
 BackupOldDotFile () {
-  if [ -f ~/$1  ]
+  if [ -f $HOME/$1  ]
   then
     echo "Renaming $1 to $1.$DATE"
     mv $HOME/$1 $HOME/$1.$DATE
@@ -36,7 +36,7 @@ done
 
 for i in $DOT_FILES_TO_BACKUP
 do
- source ~/"$i"
+ source $HOME/"$i"
 done
 
 
