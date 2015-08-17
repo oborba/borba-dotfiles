@@ -1,9 +1,8 @@
 # My DotFiles on Ubuntu
 
-Here I organize my confs of :
-
 * Tmux
 * Bashrc
-* Vim(soon)
+* Vim
+* Gitignore
 
-I use Ubuntu 12.04 and 14.04
+Ubuntu 12.04, 14.04
