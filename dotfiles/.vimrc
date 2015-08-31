@@ -8,3 +8,6 @@ syntax on
 
 "display line number
 set number
+
+"display hlsearch
+set hlsearch
