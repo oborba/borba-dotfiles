@@ -9,10 +9,10 @@ Ubuntu 12.04, 14.04
 
 ## Install
 
-- 'git clone git@github.com:oborba/borba-dotfiles.git'
+ `git clone git@github.com:oborba/borba-dotfiles.git`
 
-- 'cd borba-dotfiles'
+ `cd borba-dotfiles`
 
-- 'bash intall.sh'
+ `bash intall.sh`
 
-- Restart terminal
+  Restart terminal
