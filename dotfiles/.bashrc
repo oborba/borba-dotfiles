@@ -17,11 +17,5 @@ PS1="${debian_chroot:+($debian_chroot)}\w\$(__git_ps1)$ "
 # Color in ls output
 alias ls='ls --color=auto'
 
-# Alias for git status
-alias Gs='git status'
-
-# Alias for git commit
-alias Gco='git commit'
-
-# Alias for git add
-alias G+='git add'
+BORBA_DOT_FILES=`pwd`
+source $BORBA_DOT_FILES/dotfiles/.git_aliases
