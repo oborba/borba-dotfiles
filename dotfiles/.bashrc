@@ -16,3 +16,6 @@ PS1="${debian_chroot:+($debian_chroot)}\w\$(__git_ps1)$ "
 
 # Color in ls output
 alias ls='ls --color=auto'
+
+# Alias for git status
+alias gits='git status'
