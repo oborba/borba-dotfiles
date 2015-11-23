@@ -16,9 +16,13 @@ echo_blue() {
 }
 
 puts_notice() {
+  echo " "
   echo -e "$txtblue### $1 ###$clroff"
+  echo " "
 }
 
 puts_success() {
+  echo " "
   echo -e "$txtgreen### $1 ###$clroff"
+  echo " "
 }
