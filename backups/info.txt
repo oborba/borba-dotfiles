@@ -1,0 +1,2 @@
+The first time you install.sh, it moves your dotfiles to this folder.
+If you can return your confs, just move it .
