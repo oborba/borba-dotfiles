@@ -43,3 +43,9 @@ do
  CreateLinkTo "$i"
 done
 
+echo ""
+echo_yellow "Set files to ignore..."
+echo ""
+
+git config --global core.excludesfile ~/.gitignore_global
+
