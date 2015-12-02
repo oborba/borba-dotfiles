@@ -17,4 +17,4 @@ PS1="${debian_chroot:+($debian_chroot)}\w\$(__git_ps1)$ "
 # Color in ls output
 alias ls='ls --color=auto'
 
-source ~/.git_aliases
+source ~/.bundle_scripts
