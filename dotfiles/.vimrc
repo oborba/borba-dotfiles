@@ -9,6 +9,10 @@ syntax on
 "display line number
 set number
 
+"more intuitive split
+set splitbelow
+set splitright
+
 "display hlsearch
 set hlsearch
 
