@@ -16,12 +16,6 @@ set splitright
 "display hlsearch
 set hlsearch
 
-"set runtime path to ctrlP plugin.
-"if you don't know ctrlP, see this https://github.com/kien/ctrlp.vim
-"or follow this instalation instruction
-"http://kien.github.io/ctrlp.vim/#installation
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 " Highlight extra white spaces #
 " via http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -36,3 +30,38 @@ autocmd BufWinLeave * call clearmatches()
 function Rws()
   %s/\s\+$//g
 endfunction
+
+"Manage vim Plugins
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"------------ Plugins ---------------
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Airline status bar
+Plugin 'vim-airline/vim-airline'
+set laststatus=2 "Appear all the time
+
+" Search files easy way with ctrlP
+Plugin 'ctrlpvim/ctrlp.vim'
+set runtimepath^=~/.vim/bundle/ctrlp.vim "set runtime path to ctrlP plugin.
+
+" Tree view with :NERDTree
+Plugin 'scrooloose/nerdtree'
+
+" Auto create the brackets pairs
+Plugin 'jiangmiao/auto-pairs'
+
+" Close opened blocks def, if...
+Plugin 'tpope/vim-endwise'
+
+"------------ /Plugins --------------
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
