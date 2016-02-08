@@ -40,7 +40,7 @@ puts_success "Creating new dotfiles"
 
 for i in $DOT_FILES_TO_BACKUP
 do
- CreateLinkTo "$i"
+  CreateLinkTo "$i"
 done
 
 echo ""
@@ -49,3 +49,13 @@ echo ""
 
 git config --global core.excludesfile ~/.gitignore_global
 
+puts_notice "Vim setup..."
+
+if [ -e "$HOME/.vim/bundle/Vundle.vim"  ]; then
+  echo_blue "=== Vundle is already configured ==="
+else
+  echo_blue "=== Vundle Config ==="
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+  echo_blue "=== /Vundle Config ==="
+fi
