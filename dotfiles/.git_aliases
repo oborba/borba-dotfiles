@@ -1,8 +1,11 @@
 # Alias for git status
-alias Gs='git status'
+alias gstatus='git status'
 
 # Alias for git commit
-alias Gco='git commit'
+alias gcommit='git commit'
 
 # Alias for git add
-alias G+='git add'
+alias gadd='git add'
+
+# Alias for git log --oneline
+alias glog='git log --oneline'
