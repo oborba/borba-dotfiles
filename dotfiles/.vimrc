@@ -16,21 +16,6 @@ set splitright
 "display hlsearch
 set hlsearch
 
-" Highlight extra white spaces #
-" via http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-"Remove extra White Spaces
-"usage ':call Rws()'
-function Rws()
-  %s/\s\+$//g
-endfunction
-
 "Manage vim Plugins
 
 " set the runtime path to include Vundle and initialize
@@ -46,6 +31,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 set laststatus=2 "Appear all the time
 
+" Airline themes
+Plugin 'vim-airline/vim-airline-themes'
+
 " Search files easy way with ctrlP
 Plugin 'ctrlpvim/ctrlp.vim'
 set runtimepath^=~/.vim/bundle/ctrlp.vim "set runtime path to ctrlP plugin.
@@ -58,6 +46,9 @@ Plugin 'jiangmiao/auto-pairs'
 
 " Close opened blocks def, if...
 Plugin 'tpope/vim-endwise'
+
+" Fix extra white spaces
+Plugin 'bronson/vim-trailing-whitespace'
 
 "------------ /Plugins --------------
 
