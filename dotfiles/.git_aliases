@@ -1,11 +1,21 @@
-# Alias for git status
+# Status
 alias gstatus='git status'
 
-# Alias for git commit
+# Commit
 alias gcommit='git commit'
 
-# Alias for git add
+# Add
 alias gadd='git add'
 
-# Alias for git log --oneline
+# Log --oneline
 alias glog='git log --oneline'
+
+# Stash
+alias gstash='git stash'
+
+# Stash Pop
+alias gstash-pop='git stash pop'
+
+# Diff
+alias gdiff='git diff'
+
