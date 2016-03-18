@@ -16,8 +16,11 @@ set splitright
 "display hlsearch
 set hlsearch
 
-"Manage vim Plugins
+"highlight column on 80
+highlight ColorColumn ctermbg=235 guibg=#2c2d2
+let &colorcolumn=81
 
+"Manage vim Plugins
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
