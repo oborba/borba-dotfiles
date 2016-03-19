@@ -14,8 +14,17 @@ alias glog='git log --oneline'
 alias gstash='git stash'
 
 # Stash Pop
-alias gstash-pop='git stash pop'
+alias gstashp='git stash pop'
 
 # Diff
 alias gdiff='git diff'
+
+# Pull
+alias gpull='git pull'
+
+# Pull Origin
+alias gpullorigin='git pull origin'
+
+# Push
+alias gpush='git push'
 
