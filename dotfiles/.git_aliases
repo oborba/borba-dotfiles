@@ -28,3 +28,8 @@ alias gpullorigin='git pull origin'
 # Push
 alias gpush='git push'
 
+# Checkout
+alias gco='git checkout'
+
+# New branch
+alias gnew='git checkout -b'
