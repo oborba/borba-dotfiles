@@ -17,4 +17,7 @@ PS1="${debian_chroot:+($debian_chroot)}\w\$(__git_ps1)$ "
 # Color in ls output
 alias ls='ls --color=auto'
 
+# Color in grep match
+alias grep='grep --color=always'
+
 source ~/.bundle_scripts
