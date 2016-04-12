@@ -1,3 +1,10 @@
+# Unstage added files
+git config --global alias.unstage 'reset HEAD --'
+
+# Checkout
+git config --global alias.co checkout
+alias gco='git checkout'
+
 # Status
 alias gstatus='git status'
 
@@ -9,6 +16,9 @@ alias gadd='git add'
 
 # Log --oneline
 alias glog='git log --oneline'
+
+# See last commit
+git config --global alias.last 'log -1 HEAD'
 
 # Stash
 alias gstash='git stash'
@@ -27,9 +37,6 @@ alias gpullorigin='git pull origin'
 
 # Push
 alias gpush='git push'
-
-# Checkout
-alias gco='git checkout'
 
 # New branch
 alias gnew='git checkout -b'
