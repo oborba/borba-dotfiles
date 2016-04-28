@@ -51,6 +51,13 @@ git config --global core.excludesfile ~/.gitignore_global
 
 puts_notice "Vim setup..."
 
+if which vim > /dev/null; then
+  echo_blue "=== Vim is already installed ==="
+else
+  echo_blue "=== Install vim ==="
+  sudo apt-get install vim > /dev/null
+fi
+
 if [ -e "$HOME/.vim/bundle/Vundle.vim"  ]; then
   echo_blue "=== Vundle is already configured ==="
 else
