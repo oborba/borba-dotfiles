@@ -20,4 +20,7 @@ alias ls='ls --color=auto'
 # Color in grep match
 alias grep='grep --color=always'
 
+# When forget sudo
+alias fuck='sudo $(history -p \!\!)'
+
 source ~/.bundle_scripts
