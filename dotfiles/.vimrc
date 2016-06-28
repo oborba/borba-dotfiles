@@ -17,7 +17,7 @@ set splitright
 set hlsearch
 
 "highlight column on 80
-highlight ColorColumn ctermbg=235 guibg=#2c2d2
+highlight ColorColumn ctermbg=235 guibg=#2c2d02
 let &colorcolumn=81
 
 "Manage vim Plugins
