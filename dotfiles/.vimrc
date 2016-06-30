@@ -1,10 +1,13 @@
+" Encode
+scriptencoding utf-8
+set encoding=utf-8
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
 "tab options
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
-"enable syntax highlight
-syntax on
 
 "display line number
 set number
@@ -52,6 +55,9 @@ Plugin 'tpope/vim-endwise'
 
 " Fix extra white spaces
 Plugin 'bronson/vim-trailing-whitespace'
+
+" Elixir syntax
+Plugin 'elixir-lang/vim-elixir'
 
 "------------ /Plugins --------------
 
