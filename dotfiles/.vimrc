@@ -65,3 +65,5 @@ Plugin 'elixir-lang/vim-elixir'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Syntax on by default
+syntax on
