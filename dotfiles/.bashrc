@@ -23,4 +23,12 @@ alias grep='grep --color=always'
 # When forget sudo
 alias fuck='sudo $(history -p \!\!)'
 
+# Set date and hour for each command on history
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# Share history by all sections (activated when you press the enter)
+# Very useful for tmux users
+shopt -s histappend
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 source ~/.bundle_scripts

@@ -56,8 +56,11 @@ Plugin 'tpope/vim-endwise'
 " Fix extra white spaces
 Plugin 'bronson/vim-trailing-whitespace'
 
-" Elixir syntax
-Plugin 'elixir-lang/vim-elixir'
+" Support for many languages
+Plugin 'sheerun/vim-polyglot'
+
+" Ack search from vim. You will need ack (>= 2.0)
+Plugin 'mileszs/ack.vim'
 
 "------------ /Plugins --------------
 
