@@ -27,8 +27,12 @@ alias fuck='sudo $(history -p \!\!)'
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Share history by all sections (activated when you press the enter)
-# Very useful for tmux users
+# Very useful for tmux
 shopt -s histappend
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
+# Ignore duplicate lines
+export HISTCONTROL=ignoredups
+
+# Load helper scripts
 source ~/.bundle_scripts
