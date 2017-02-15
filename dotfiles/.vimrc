@@ -62,6 +62,8 @@ Plugin 'sheerun/vim-polyglot'
 " Ack search from vim. You will need ack (>= 2.0)
 Plugin 'mileszs/ack.vim'
 
+" Walk through installed colorschemes using arrow keys
+Plugin 'vim-scripts/ScrollColors'
 "------------ /Plugins --------------
 
 " All of your Plugins must be added before the following line

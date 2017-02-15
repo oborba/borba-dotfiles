@@ -13,6 +13,6 @@ Used in Ubuntu 12.04 and 14.04 (Feel free to try in any other linux system)
 
  `$ cd borba-dotfiles`
 
- `$ bash intall.sh`
+ `$ bash install.sh`
 
   Restart terminal
