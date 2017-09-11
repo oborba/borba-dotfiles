@@ -30,10 +30,59 @@ do
   BackupOldDotFile "$i"
 done
 
+tmuxSetup() {
+  puts_notice "Tmux setup..."
+
+  if which tmux > /dev/null; then
+    echo_blue "=== Tmux is already installed ==="
+  else
+    echo_blue "=== Install Tmux ==="
+    sudo apt-get install tmux > /dev/null
+  fi
+}
+
+vimSetup() {
+  puts_notice "Vim setup..."
+
+  installVim
+  setupVundle
+}
+
+installVim() {
+  if which vim > /dev/null; then
+    echo_blue "=== Vim is already installed ==="
+  else
+    echo_blue "=== Install vim ==="
+    sudo apt-get install vim > /dev/null
+  fi
+}
+
+setupVundle() {
+  if [ -e "$HOME/.vim/bundle/Vundle.vim"  ]; then
+    echo_blue "=== Vundle is already configured ==="
+  else
+    vundleConfig
+ fi
+}
+
+vundleConfig() {
+  echo_blue "=== Vundle Config ==="
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+  echo_blue "=== /Vundle Config ==="
+}
 
 CreateLinkTo() {
   echo_green "Creating new $1"
   $(cd $HOME && ln -s $CURRENT_PATH/dotfiles/$1 $1)
+}
+
+filesToIgnore() {
+  echo ""
+  echo_yellow "Set files to ignore..."
+  echo ""
+
+  git config --global core.excludesfile ~/.gitignore_global
 }
 
 puts_success "Creating new dotfiles"
@@ -43,26 +92,6 @@ do
   CreateLinkTo "$i"
 done
 
-echo ""
-echo_yellow "Set files to ignore..."
-echo ""
-
-git config --global core.excludesfile ~/.gitignore_global
-
-puts_notice "Vim setup..."
-
-if which vim > /dev/null; then
-  echo_blue "=== Vim is already installed ==="
-else
-  echo_blue "=== Install vim ==="
-  sudo apt-get install vim > /dev/null
-fi
-
-if [ -e "$HOME/.vim/bundle/Vundle.vim"  ]; then
-  echo_blue "=== Vundle is already configured ==="
-else
-  echo_blue "=== Vundle Config ==="
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  vim +PluginInstall +qall
-  echo_blue "=== /Vundle Config ==="
-fi
+filesToIgnore
+vimSetup
+tmuxSetup
