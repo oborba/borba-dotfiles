@@ -5,7 +5,7 @@
 * Vim
 * Gitignore
 
-Used in Ubuntu 12.04 and 14.04 (Feel free to try in any other linux system)
+Used in Ubuntu 12.04, 14.04 and 16.04 (Feel free to try in any other linux system)
 
 ## Install
 
